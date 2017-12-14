@@ -1,0 +1,6 @@
+<ion-tabs color='flo_dark'>
+  <ion-tab [root]="tab1Root" tabTitle="{{'HOME'| translate}} " tabIcon="home" ></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="{{'QUIZ_LIST' | translate}} " tabIcon="school" tabBadge="" [tabBadge] = "quizCount>0 ? quizCount : null" tabBadgeStyle="flo4"></ion-tab>
+   <ion-tab [root]="tab3Root" tabTitle="{{'TOOLS' | translate}} " tabIcon="hammer"></ion-tab>
+   <ion-tab [root]="tab4Root" tabTitle="{{'ABOUT' | translate}} " tabIcon="information-circle"></ion-tab>
+</ion-tabs>

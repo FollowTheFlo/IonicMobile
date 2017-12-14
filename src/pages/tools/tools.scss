@@ -1,0 +1,32 @@
+page-tools {
+
+}
+.ToolsStyle{
+
+    background-color: lightgray;
+    text-align:center;
+    
+
+}
+
+.ToolsElementStyle{
+    
+       
+    background-color: map-get($colors, flo);
+    color: white;
+    text-align: center;
+    
+    }
+
+.ToolsNumber{
+
+    background-color:map-get($colors, light);
+    border-radius: 5px;
+    color: map-get($colors, flo);
+}
+
+
+.ToolsSub{
+    background-color:map-get($colors, light);
+
+}

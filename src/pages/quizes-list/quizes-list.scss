@@ -1,0 +1,56 @@
+.quizeslist{
+    
+
+        text-align: center;
+      
+    }
+
+    ion-card.quiz-cards-list-finished ion-card-header {
+       // background-color: #3B5998;
+        background-color: map-get($colors, flo);
+        color: white;
+        text-align: center;
+      }
+
+      ion-card.quiz-cards-list-progress ion-card-header {
+        // background-color: #3B5998;
+         background-color: map-get($colors, flo4);
+         color: white;
+         text-align: center;
+       }
+
+     
+.quizListContent{
+    background-color: yellow;
+color:red;
+}
+
+.iconSize button{
+  font-size: 100%;
+
+}
+
+.HeaderStyle{
+  
+     
+  background-color: map-get($colors, flo);
+  color: white;
+  text-align: center;
+  
+  }
+
+  .ElementStyle{
+    
+       
+    background-color: map-get($colors, light);
+    color: map-get($colors, flo);
+    font-weight:bold;
+    //text-align: center;
+    
+    }
+
+    .topNav{
+      
+          text-align:left;
+         
+        }

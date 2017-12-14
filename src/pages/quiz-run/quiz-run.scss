@@ -1,0 +1,64 @@
+.QuestionHeader
+{
+
+    text-align:center; 
+    color:black;
+    
+}
+
+.buttonAnswer{
+
+    background-color: map-get($colors, flo);
+}
+
+
+.QuestionChoiceElement
+{
+   
+    color:black;
+   
+   font-weight: bold;
+  
+     text-align:left;
+    
+     cursor:pointer;
+}
+
+.QuestionChoiceElementSelected
+{
+   
+    background-color: yellow; 
+    font-weight: bold;
+   
+   color:black; 
+  
+     text-align:left;
+    
+     cursor:pointer;
+}
+
+
+.QuestionChoiceElementPassed
+{
+   
+    background-color: green; 
+   
+   color:black; 
+   border: 1px solid black;  
+     text-align:left;
+     border-radius: 5px;
+     cursor:pointer;
+}
+
+.QuestionChoiceElementFailed
+{
+   
+    background-color: red; 
+    margin-top: 10px;
+    padding: 5px;
+   color:black; 
+   border: 1px solid black;  
+     text-align:left;
+     border-radius: 5px;
+     cursor:pointer;
+}

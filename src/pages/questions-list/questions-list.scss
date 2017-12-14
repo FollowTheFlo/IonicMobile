@@ -1,0 +1,36 @@
+.questionlist{
+
+    background-color: map-get($colors, flo);
+    
+    color:white;
+    text-align: left;
+    padding: 2% 0% 2% 17%;
+}
+
+.questionlist h4{
+    
+    background-color: map-get($colors, flo);
+        
+        color:lightgray;
+        
+    }
+
+   .backButton{
+
+        color:white;
+        background-color: map-get($colors, dark);
+        font-weight: bold;
+        font-size: 120%;
+    }
+
+    .backButton ion-icon{
+        font-size: 100%;
+        font-weight:bold;
+    
+      }
+
+      .topNav {
+        
+           text-align: center;
+                      
+          }

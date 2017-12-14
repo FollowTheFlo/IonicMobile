@@ -1,0 +1,105 @@
+
+
+
+      
+<ion-header>
+        
+    <ion-navbar color='flo_dark'>
+            <ion-title>{{'ANSWER_QUIZ' | translate}}</ion-title>
+
+            
+          </ion-navbar>
+
+
+        
+        </ion-header>
+        
+        
+
+
+        
+        <ion-content padding class='HomeStyle'>
+
+    <div *ngIf= quiz>
+        <div *ngIf= !quiz.is_finished>
+            <div *ngIf= currentQuestion>
+    <div class='QuestionHeader'>
+        
+                    <h4>{{currentQuestionIndex+1}} / {{quiz.toasts_list.length}}</h4>
+                    <!-- Float the icon left -->
+           
+                
+                <!-- Float the icon right -->
+
+
+               
+
+                                <div *ngIf=!lastQuestion>
+                                        <div *ngIf=!firstQuestion>
+                                            <button ion-button icon-left (click)="onClickPreviousQuestion()" class='buttonAnswer'>
+                                                    <ion-icon name="arrow-dropleft-circle"></ion-icon>{{'PREVIOUS' | translate}}</button>
+                                            
+                                                
+                                        </div>
+                                    
+                                    
+                                 </div>
+                
+                                 <div *ngIf=lastQuestion>
+                
+                                        <div *ngIf=!firstQuestion>
+                                        <button ion-button icon-left (click)="onClickPreviousQuestion()" class='buttonAnswer'>
+                                                <ion-icon name="arrow-dropleft-circle"></ion-icon>{{'PREVIOUS' | translate}}</button>
+                                                <button ion-button icon-right  (click)="onClickFinish()" class='buttonAnswer'> {{'FINISH' | translate}}</button>
+                                            
+                                        </div>
+                                        
+                                     </div>
+<!--
+                                     <div *ngIf=!lastQuestion>
+                                            
+                                        <div *ngIf=firstQuestion>
+                                                <button ion-button icon-right  (click)="onClickNextQuestion()" class='buttonAnswer'>Next
+                                                        <ion-icon name="arrow-dropright-circle"></ion-icon></button> 
+                                            
+                                        </div>
+                                    
+                                    </div>
+                                -->
+                                    <div *ngIf=lastQuestion>
+                                            
+                                        <div *ngIf=firstQuestion>
+                                                <button ion-button icon-right  (click)="onClickFinish()" class='buttonAnswer'>  {{'FINISH' | translate}}</button>
+                                            
+                                        </div>
+                                    
+                                    </div>
+
+
+
+
+
+
+            
+                <h3><b>'{{ quiz.target_name}}'</b> {{'BEST_RELATED_QUESTION' | translate}}</h3>
+            </div>
+                <ion-card *ngFor="let article of currentQuestion.article_shuffle_list; let j = index" [ngClass]="{'QuestionChoiceElementSelected': (article.user_answer == true), 'QuestionChoiceElement': (article.user_answer == false) }"
+                class="QuestionChoiceElement" (click)="onClickSelectQuestion(j)">
+                        
+                       
+                         <ion-card-content>
+                             <div *ngIf= !currentQuestion.imageQuestion >{{j+1}} - {{ article.article_name }} </div>
+                            
+                             <div style='text-align: center;' *ngIf= currentQuestion.imageQuestion >
+                                        {{j+1}} - <img  [src]="sanitizer.bypassSecurityTrustUrl(article.thumbnail_url)"/>
+                            </div>
+                      
+                            </ion-card-content>
+                         
+                        
+                </ion-card>
+            </div>
+        </div>     
+    </div>
+    
+      </ion-content>

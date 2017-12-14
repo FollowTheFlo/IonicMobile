@@ -1,0 +1,56 @@
+.QuestionHeader
+{
+
+    text-align:center; 
+    
+}
+
+
+.QuestionChoiceElement
+{
+   
+   
+    color:black; 
+       
+  
+     text-align:left;
+    
+     cursor:pointer;
+}
+
+.QuestionChoiceElementSelected
+{
+   
+    background-color: yellow; 
+   
+   color:black; 
+  
+     text-align:left;
+    
+     cursor:pointer;
+}
+
+
+.QuestionChoiceElementPassed
+{
+   
+    background-color: green; 
+   
+   color:black; 
+  
+     text-align:left;
+    
+     cursor:pointer;
+}
+
+.QuestionChoiceElementFailed
+{
+   
+    background-color: red; 
+   
+   color:black; 
+  
+     text-align:left;
+   
+     cursor:pointer;
+}

@@ -1,0 +1,120 @@
+.ModuleTitle
+{
+
+   
+    
+    color: map-get($colors, light);
+    
+   // border-style:solid;
+   // border-color: map-get($colors, light);
+    text-align: center;
+    font-size: 140%;
+    font-family: sans-serif;
+   // font-weight:bold;
+
+   
+  
+
+}
+
+.HeaderStyleFlo{
+    background-color: map-get($colors, flo);
+}
+
+
+.HomeStyle
+{
+    background-color: lightgray;
+    //background-color: map-get($colors, flo2);
+
+}
+
+
+.loadingStatus
+{
+    font-size: 20px;
+    text-align: center;
+    color:red;
+    font-weight: bold;
+}
+.loadingStatusOK
+{
+    font-size: 20px;
+    text-align: center;
+    color:green;
+    font-weight: bold;
+}
+
+
+ion-card.quiz-create-cards-list  {
+  // margin-top: 5%;
+   background-color: map-get($colors, flo);
+    text-align: center;
+    //border-radius : 5px;
+  }
+
+  .create-button{
+    font-size: 20px;
+    text-align: center;
+    background-color: map-get($colors, flo);
+    color:map-get($colors, light);
+    vertical-align: center;
+ 
+
+  }
+
+  .iconSize{
+    font-size: 150%;
+    font-family: sans-serif;
+
+  }
+
+  .topNav{
+
+    text-align: center;
+   
+  }
+
+  
+
+
+  ion-card.recommender{
+  background-color: map-get($colors, light);
+  color: map-get($colors, light);
+  text-align: center;
+  padding-bottom: 1%;
+  margin-top:-1%;
+
+}
+
+
+.SubRecommender{
+    
+    background-color: map-get($colors, flo);
+    color: map-get($colors, light);
+    text-align: center;
+}
+
+
+ion-card.recommender ion-card-header{
+
+    background-color: map-get($colors, flo);
+    color: map-get($colors, light);
+    text-align: center;
+    margin-bottom: -2%;
+    margin-top: -2%;
+}
+
+
+ion-card.recommender ion-slides{
+   // padding-top: -19%;
+   //padding-top:-10%;
+        background-color: map-get($colors, light);
+        color: map-get($colors, light);
+        text-align: center;
+    }
+.singleSlide{
+    // padding-top: -19%;
+    margin-top:-5%;
+           
+        }

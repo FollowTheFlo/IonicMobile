@@ -1,0 +1,72 @@
+<!--
+  Generated template for the QuizSavePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='flo_dark'>
+    <ion-title>{{actionTitle}} Quiz</ion-title>
+ 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class='HomeStyle'>
+
+<div *ngIf=isSaveAction>
+    <ion-grid>
+       
+        <ion-card class='quiz-save-cards' >
+           
+                 <ion-card-header>
+                     <div class='ModuleTitle'>Save my Quiz List</div>
+             
+                    </ion-card-header>
+                  <ion-card-content>
+                 <ion-item>
+             <ion-input #userNameInputSave type="text" color="dark" placeholder='Enter your Name' value=''
+             (keyup.enter)="onClickSaveQuizList(userNameInputSave.value)">
+            </ion-input>
+              </ion-item>
+                
+                   
+                  <button class='save-button' ion-button color="light" outline (click)="onClickSaveQuizList(userNameInputSave.value)">Save</button>
+                  <button class='save-button' ion-button color="light" outline (click)="onClickCancel()">Cancel</button>
+                 
+               
+              </ion-card-content>
+            </ion-card>
+  </ion-grid>
+</div>
+
+
+<div *ngIf=!isSaveAction>
+    <ion-grid>
+       
+        <ion-card  class='quiz-save-cards'>
+           
+                 <ion-card-header>
+                     <div class='ModuleTitle'>Download my Quiz List</div>
+             
+                    </ion-card-header>
+                  <ion-card-content>
+                 <ion-item>
+             <ion-input #userNameInputRetrieve type="text" color="dark" placeholder='Enter your Name' value=''
+             (keyup.enter)="onClickRetrieveQuizList(userNameInputRetrieve.value)">
+            </ion-input>
+              </ion-item>
+                  
+                  <button class='save-button' ion-button color="light" outline (click)="onClickRetrieveQuizList(userNameInputRetrieve.value)">Download</button>
+                  <button class='save-button' ion-button color="light" outline (click)="onClickCancel()">Cancel</button>
+                 
+               
+              </ion-card-content>
+            </ion-card>
+  </ion-grid>
+</div>
+
+
+</ion-content>

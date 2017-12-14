@@ -1,0 +1,49 @@
+
+    .ToolsStyle{
+    
+        background-color: lightgray;
+        text-align:center;
+       // margin-top:-5%;
+        
+    
+    }
+    
+    .ToolsElementStyle{
+        
+           
+        background-color: map-get($colors, flo);
+        color: white;
+        text-align: center;
+        
+        
+        }
+    
+    .ToolsNumber{
+    
+        background-color:map-get($colors, light);
+        border-radius: 5px;
+        color: map-get($colors, flo);
+    }
+    
+    
+    .ToolsSub{
+        background-color:map-get($colors, light);
+        //padding-bottom:-10%;
+    
+    }
+
+    ion-card.quiz-save-cards  {
+        // margin-top: 30%;
+         background-color: map-get($colors, flo);
+          text-align: center;
+        }
+      
+        .save-button{
+          //font-size: 20px;
+          text-align: center;
+          background-color: map-get($colors, flo);
+          color:light;
+          vertical-align: center;
+       
+      
+        }

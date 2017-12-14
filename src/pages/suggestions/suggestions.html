@@ -1,0 +1,29 @@
+<!--
+  Generated template for the SuggestionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    
+    <ion-navbar color='flo_dark'>
+        <ion-title>Suggestions for  '{{articleInputString}}'</ion-title>
+      </ion-navbar>
+    
+    </ion-header>
+    
+    
+    <ion-content *ngIf=suggestionsList>
+    
+        <ion-list>
+              
+           
+               <ion-item  ion-item *ngFor="let suggestion of suggestionsList" (click)="onSelectSuggestion(suggestion)">
+                  <ion-icon name="arrow-dropright" color='flo' item-end></ion-icon>
+                  {{suggestion}}
+               </ion-item>
+           
+          
+    </ion-list>
+    </ion-content>
+    

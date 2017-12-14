@@ -1,0 +1,19 @@
+page-quiz-save {
+
+}
+
+ion-card.quiz-save-cards  {
+   // margin-top: 30%;
+    background-color: map-get($colors, flo);
+     text-align: center;
+   }
+ 
+   .save-button{
+     //font-size: 20px;
+     text-align: center;
+     background-color: map-get($colors, flo);
+     color:light;
+     vertical-align: center;
+  
+ 
+   }

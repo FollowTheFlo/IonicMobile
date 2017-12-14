@@ -1,0 +1,31 @@
+<ion-header>
+        
+          <ion-navbar color='flo_dark'>
+            <ion-title>Question Result Details</ion-title>
+          </ion-navbar>
+        
+        </ion-header>
+        
+       
+        <ion-content padding class='HomeStyle'>
+
+      
+                <ion-card *ngFor="let article of question.article_shuffle_list; let j = index"  
+                [ngClass]="{'QuestionChoiceElement':true, 'QuestionChoiceElementPassed': (article.wiki_correct == true), 'QuestionChoiceElementFailed': (article.wiki_correct == false &&  article.user_answer==true) }"
+                class="QuestionChoiceElement">
+                        
+                       
+                         <ion-card-content>
+                             <div *ngIf= !question.imageQuestion >{{j+1}} - {{ article.article_name }} </div>
+                            
+                             <div style='text-align: center;' *ngIf= question.imageQuestion >
+                                        {{j+1}} - <img  [src]="sanitizer.bypassSecurityTrustUrl(article.thumbnail_url)"/>
+                            </div>
+                      
+                            </ion-card-content>
+                         
+                        
+                </ion-card>
+          
+    
+      </ion-content>

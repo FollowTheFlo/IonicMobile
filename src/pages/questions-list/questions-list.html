@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar  color='flo_dark'>
+     
+    <button (click)='onClickBack()' clear class="backButton">
+        <ion-icon name="arrow-back"> {{'QUIZ_LIST' | translate}}</ion-icon>
+    </button>
+      <ion-title class="topNav">{{'RESULTS' | translate}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content class='HomeStyle'>
+        <ion-card class='questionlist'>
+    
+  <h4> {{'SUBJECT' | translate}}: <b> {{quiz.target_name}}</b></h4>
+  <a target="_blank" *ngIf=quiz.target_name [href]= "'https://'+quiz.language+'.wikipedia.org/wiki/'+quiz.target_name"> {{'WIKIPEDIA_ARTICLE' | translate}} </a>
+  <h4 *ngIf=quiz.start_timestamp>{{'START_TIME' | translate}}:<b> {{quiz.start_timestamp}}</b></h4>
+  <h4>Score: <b>{{quiz.final_score}}% ({{quiz.good_answers_count}}/{{quiz.toasts_list.length }})</b> </h4>
+ 
+</ion-card>
+    <ion-list>
+        <ion-item ion-item *ngFor="let question of quiz.toasts_list; let i = index" (click)="onClickSelectQuestion(question)">
+          <ion-icon *ngIf=question.answered_ok name="happy" color='secondary' item-start>
+              
+          </ion-icon>
+          Question {{i+1}}
+          <ion-icon *ngIf=!question.answered_ok name="sad" color='danger' item-start></ion-icon>
+
+          <ion-icon name="arrow-dropright-circle" color='flo' item-end></ion-icon>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+
+     

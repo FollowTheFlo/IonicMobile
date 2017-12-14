@@ -1,0 +1,60 @@
+page-about {
+
+}
+
+.ToolsStyle{
+    
+        background-color: lightgray;
+        text-align:center;
+        font-size:80%;
+        
+    
+    }
+    
+    .ToolsHeaderStyle{
+        
+           
+        background-color: map-get($colors, flo);
+        color: map-get($colors, light);
+        text-align: center;
+       
+        
+        }
+
+        .ToolsElStyle{
+            
+               
+            background-color: map-get($colors, light);
+            color: map-get($colors, flo);
+            text-align: left;
+           font-size:100%;
+            
+            }
+
+.AboutElStyle{
+    
+        
+    background-color: map-get($colors, light);
+    color: map-get($colors, flo);
+    text-align: left;
+    font-size:100%;
+    
+    }
+
+.aboutFlo{
+   // background-color: map-get($colors, light);
+   // color: map-get($colors, flo);
+    text-align: center;
+   // margin-top:90%;
+}
+
+.middleStyle{
+
+    display:inline-block;
+    text-align:center;
+}
+.iconSize {
+    font-size: 100%;
+  
+  }
+

@@ -1,0 +1,112 @@
+
+<ion-header>
+    
+      <ion-navbar class='topNav' color='flo_dark'>
+        <ion-title> {{ 'HOME' | translate }}</ion-title>
+
+        <ion-buttons end>
+                  
+              <button ion-button icon-right color="light" (click)='onClickRetrieve()' class='iconSize'>
+                   <ion-icon  name="cloud-download"></ion-icon>
+              </button>
+            </ion-buttons>
+      </ion-navbar>
+    
+    </ion-header>
+    
+
+    
+    
+    <ion-content  class='HomeStyle'>
+
+        <ion-grid>
+            <ion-row>
+            <ion-card class='quiz-create-cards-list' >
+                    
+                     <ion-card-header>
+                         <div class='ModuleTitle'>{{ 'ENTER_SUBJECT' | translate }}</div>
+                 
+                        </ion-card-header>
+                      <ion-card-content>
+                     <ion-item>
+                 <ion-input #articleNameInput type="search" color="dark" placeholder='ex:Paris,cat,Canada,Obama' value={{targetInputValue}}
+                 (keyup.enter)="clickCreateQuiz(articleNameInput.value,false)">
+                </ion-input>
+                  </ion-item>
+                  
+                     
+                     </ion-card-content>
+                    
+                     <ion-row>
+                        <ion-col col-12>
+                      <button class='create-button' ion-button color="light" outline (click)="clickCreateQuiz(articleNameInput.value,false)">
+                        {{ 'LAUNCH_QUIZ' | translate }}
+                      </button>
+                      </ion-col>
+                   </ion-row>
+                 
+                 
+                     <ion-row >
+                     
+                        <ion-col>
+                            <button style="text-transform: none;" ion-button icon-left clear color='light' (click)="presentLanguagePopover($event)">
+                              <ion-icon name="chatbubbles"></ion-icon>
+                              <div>LANGUAGE ({{language}})</div>
+                            </button>
+                          </ion-col>
+                        <ion-col>
+                          <button ion-button icon-left clear color='light' (click)="clickOptions()">
+                            <ion-icon name="options"></ion-icon>
+                            <div>Options</div>
+                          </button>
+                        </ion-col>
+                      
+                        </ion-row>
+
+                      
+                        
+                    </ion-card>
+</ion-row>
+<ion-row *ngIf=recommendersList>
+    <ion-card class='recommender' >
+        
+                              
+                               <ion-card-header class='iconSize'>
+                                  
+                                  <ion-icon name="arrow-dropleft-circle" color='light' (click)="onClickSlideChange('left')" start></ion-icon>
+                                  &nbsp;&nbsp;{{'SUGGESTION_QUIZ' | translate}}&nbsp;&nbsp;
+                                   <ion-icon name="arrow-dropright-circle" color='light'  (click)="onClickSlideChange('right')" end></ion-icon>                        
+                               </ion-card-header>
+                               
+                          
+                                <ion-slides  loop=true slidesPerView=3>
+               
+                                    <ion-slide *ngFor="let article of recommendersList; let i = index" class='singleSlide'>
+                                       
+                                     
+                                      <ion-card class='SubRecommender' (click)="clickCreateQuiz(article.article_name,false)">
+                                          {{article.article_name}}
+                                          <img  [src]="sanitizer.bypassSecurityTrustUrl(article.thumbnail_url)"/>
+                                       
+                                      </ion-card>
+                                    </ion-slide>
+                                  </ion-slides>
+                                 
+        
+                               
+                           
+                            </ion-card>
+
+
+</ion-row>
+</ion-grid>
+                   
+                 
+                    
+            
+
+              
+              
+
+  </ion-content>
+    
